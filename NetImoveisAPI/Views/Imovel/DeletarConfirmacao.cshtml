@@ -1,0 +1,10 @@
+﻿@model ImovelModel
+@{
+    ViewData["Title"] = "Confirmação Deletar o Imovel";
+ }
+ <div class="text-center">
+     <h3>Deseja realmente Deletar o Imovel cadastrado?(@Model.Id)</h3>
+ </div>
+
+ <a class="btn btn-primary btn-block" asp-action="Index" asp-controller="Imovel" role="button">Deletar</a>
+ <a class="btn btn-danger btn-block" asp-action="Deletar" asp-controller="Imovel" asp-route-id="@Model.Id" role="button" >Confirmar</a>

@@ -1,0 +1,65 @@
+﻿@model ImovelModel
+@{
+    ViewData["Title"] = "Cadastrar Imovel";
+ }
+
+<div class="text-center">
+
+    <h1 class="Display-4" >Cadastrar Imovel</h1>
+
+</div>
+<form asp-controller="Imovel" asp-action="Cadastrar" method="post">
+
+  <div class="form-group">
+    <label for="tipo do imovel">Tipo do Imovel</label>
+    <input type="text" asp-for="TipoImovel" class="form-control" placeholder="Casa, Apartamento, flat, etc...">
+    @Html.ValidationMessageFor(x => x.TipoImovel)
+  </div>
+    <div class="form-group">
+    <label for="valor de venda do imovel">Valor de Venda do Imovel</label>
+    <input type="text" asp-for="ValorVendaImovel" class="form-control" placeholder="Digite o Valor do Imovel">
+    @Html.ValidationMessageFor(x => x.ValorVendaImovel)
+  </div>
+    <div class="form-group">
+    <label for="valor da locacao">Valor da Locação do Imovel</label>
+    <input type="text" asp-for="ValorLocacaoImovel" class="form-control" placeholder="Digite o Valor da Locação">
+    @Html.ValidationMessageFor(x => x.ValorLocacaoImovel)
+  </div>
+    <div class="form-group">
+    <label for="endereco">Endereco</label>
+    <input type="text" asp-for="Endereco" class="form-control" placeholder="Digite o Endereço">
+    @Html.ValidationMessageFor(x => x.Endereco)
+  </div>
+    <div class="form-group">
+    <label for="Numero">Numero</label>
+    <input type="text" asp-for="Numero" class="form-control" placeholder="Digite o Numero">
+    @Html.ValidationMessageFor(x => x.Numero)
+  </div>
+    <div class="form-group">
+    <label for="Complemento">Complemento</label>
+    <input type="text" asp-for="Complemento" class="form-control" placeholder="Proximo a...">
+  </div>
+    <div class="form-group">
+    <label for="bairro">Bairro</label>
+    <input type="text" asp-for="Bairro" class="form-control" placeholder="Digite o Bairro">
+    @Html.ValidationMessageFor(x => x.Bairro)
+  </div>
+    <div class="form-group">
+    <label for="cidade">Cidade</label>
+    <input type="text" asp-for="Cidade" class="form-control" placeholder="Digite a Cidade">
+    @Html.ValidationMessageFor(x => x.Cidade)
+  </div>
+    <div class="form-group">
+    <label for="estado">Estado</label>
+    <input type="text" asp-for="Estado" class="form-control" placeholder="Digite o Estado">
+    @Html.ValidationMessageFor(x => x.Estado)
+  </div>
+    <div class="form-group">
+    <label for="cep">CEP</label>
+    <input type="text" asp-for="CEP" class="form-control" placeholder="Digite o CEP">
+    @Html.ValidationMessageFor(x => x.CEP)
+  </div>
+
+    <button type="submit" class=" btn btn-primary">Cadastrar</button>
+    <a class="btn btn-secondary" asp-controller="Imovel" asp-action="Index" role="button">Voltar</a>
+</form>
